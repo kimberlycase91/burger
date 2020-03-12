@@ -1,6 +1,6 @@
-// Inside the burgers_controller.js file, import the following:
+var express = require("express");
 
-// Express
-// burger.js
+var router = express.Router();
 
-// Create the router for the app, and export the router at the end of your file.
+// Import the model (cat.js) to use its database functions.
+var cat = require("../models/cat.js");
