@@ -10,7 +10,7 @@ router.get("/", function(req, res) {
       var hbsObject = {
         burgers: data
       };
-      console.log(hbsObject);
+      
       res.render("index", hbsObject);
     });
   });
@@ -22,18 +22,19 @@ router.get("/", function(req, res) {
       req.body.burger_name
     ], function(result) {
       // Send back the ID of the new quote
-      console.log(result.json());
-      res.json({ id: result.insertId });
+      res.redirect("/")
     });
   });
   
-  router.put("/api/burgerss/:id", function(req, res) {
+  router.put("/api/burgers/:id", function(req, res) {
+    console.log(req.params.id);
     var condition = "id = " + req.params.id;
-  
+
     console.log("condition", condition);
-  
+    console.log(req.body.devoured);
+
     burger.update({
-      devoured: req.body.devoured
+      devoured: 1
     }, condition, function(result) {
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
