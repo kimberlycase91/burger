@@ -1,5 +1,30 @@
-body {
- background-image: url("/public/assets/img/hans-vivek-sLPRSdxsMUA-unsplash.jpg")
+body { 
+  background: url(../img/lidye-1Shk_PkNkNw-unsplash.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  color: white;
+}
+
+.burgerList {
+max-width: 300px;
+}
+
+.change-devoured {
+position: relative;
+float: right;
+max-height: 21px;
+font-size: 14px;
+padding-top: 0;
+}
+
+.burgerList>li {
+font-size: 14px;
+margin-bottom: 5px;
 }
 
 /* li {
